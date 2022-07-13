@@ -1,0 +1,22 @@
+class Solution{
+public:
+	void merge(int arr1[], int arr2[], int n, int m) {
+	    vector<int>nums;
+	    for(int i=0;i<n;i++){
+	        nums.push_back(arr1[i]);
+	    }
+	    for(int i=0;i<m;i++){
+	        nums.push_back(arr2[i]);
+	    }
+	    sort(nums.begin(),nums.end());
+	    int j=0;
+	    for(int i=0;i<nums.size();i++){
+	        if(i<n){
+	            arr1[i]=nums[i];
+	        }else{
+	            arr2[j]=nums[i];
+	            j++;
+	        }
+	    }
+}
+};
